@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.quickfollowit",                              
+  "displayName": "Quick Follow It",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "A script to drag and drop a following camera in jam.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2024_09_16_QuickFollowIt.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
