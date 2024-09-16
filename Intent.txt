@@ -1,0 +1,5 @@
+When I was teaching, I just needed a script that allows to follow a target with camera and lerp.
+For drone, boat, car...
+
+So I have the same script in 4+ tools.
+Time to make just a drop tool.
