@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FollowDroneTransformLerpMono : MonoBehaviour
+public class FollowItMono_TransformLerpMono : MonoBehaviour
 {
     public Transform m_target;
     public Transform m_whatToMove;
