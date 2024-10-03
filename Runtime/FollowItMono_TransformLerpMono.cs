@@ -27,4 +27,14 @@ public class FollowItMono_TransformLerpMono : MonoBehaviour
             m_whatToMove.rotation = Quaternion.Lerp(m_whatToMove.rotation, m_target.rotation, m_lerpSpeedRotate * Time.deltaTime);
         }
     }
+
+    [ContextMenu("Move to exact position")]
+    public void MoveToExactPosition() { 
+    
+        if (m_target != null && m_whatToMove != null)
+        {
+            m_whatToMove.position = m_target.position;
+            m_whatToMove.rotation = m_target.rotation;
+        }
+    }
 }
