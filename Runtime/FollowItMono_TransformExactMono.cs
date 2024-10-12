@@ -5,6 +5,11 @@ public class FollowItMono_TransformExactMono : MonoBehaviour
     public Transform m_target;
     public Transform m_whatToMove;
 
+    private void Reset()
+    {
+        m_whatToMove = transform;
+
+    }
     public bool m_useLateUpdate;
     void Update()
     {
@@ -17,7 +22,8 @@ public class FollowItMono_TransformExactMono : MonoBehaviour
             UpdateLerp();
     }
 
-    private void UpdateLerp()
+    [ContextMenu("Move to target")]
+    public void UpdateLerp()
     {
         if (m_target != null && m_whatToMove != null)
         {
