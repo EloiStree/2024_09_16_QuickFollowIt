@@ -23,10 +23,15 @@ public class FollowItMono_TransformLerpMono : MonoBehaviour
     {
         if (m_target != null && m_whatToMove != null)
         {
-            m_whatToMove.position = Vector3.Lerp(m_whatToMove.position, m_target.position, m_lerpSpeedMove * Time.deltaTime);
-            m_whatToMove.rotation = Quaternion.Lerp(m_whatToMove.rotation, m_target.rotation, m_lerpSpeedRotate * Time.deltaTime);
+            float moveStep = m_lerpSpeedMove * Time.deltaTime;
+            float rotateStep = m_lerpSpeedRotate * Time.deltaTime;
+
+            // Ensure we reach the target instead of getting stuck approaching infinitely
+            m_whatToMove.position = Vector3.MoveTowards(m_whatToMove.position, m_target.position, moveStep);
+            m_whatToMove.rotation = Quaternion.RotateTowards(m_whatToMove.rotation, m_target.rotation, rotateStep);
         }
     }
+
 
     [ContextMenu("Move to exact position")]
     public void MoveToExactPosition() { 
